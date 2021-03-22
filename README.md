@@ -54,7 +54,7 @@ task {
 }
 ```
 
-Exactly one of the following must be set per listener rule conditions.
+Exactly one of the following must be set per listener rule conditions:
 
 - Host Header
 - HTTP Request Method
