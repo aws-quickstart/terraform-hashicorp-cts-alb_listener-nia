@@ -90,14 +90,9 @@ service {
 
 | Name | Version |
 |------|---------|
-| Terraform | 0.14 or later |
-| AWS | 3.32 or later |
+| [Terraform](https://www.terraform.io/downloads.html) | 0.14 or later |
+| [AWS provider for Terraform](https://registry.terraform.io/providers/hashicorp/aws/latest) | 3.32 or later |
 
-## Providers
-
-| Name | Version |
-|------|---------|
-| [AWS provider for Terraform](https://registry.terraform.io/providers/hashicorp/aws/latest)| 3.32 or later |
 
 ## Inputs
 
