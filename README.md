@@ -1,8 +1,6 @@
 # terraform-consul_sync-aws-alb_listener_rule-nia
 
-This module for Consul Terraform Sync creates a listener rule and
-target group for an AWS Application Load Balancer
-that forwards to a Consul ingress gateway. 
+The Consul Terraform Sync module creates a listener rule and target group for an AWS Application Load Balancer. When the rule condition is met, traffic is forwarded to a Consul ingress gateway.
 
 ## Authors
 
