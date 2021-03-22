@@ -97,7 +97,7 @@ service {
 
 | Name | Version |
 |------|---------|
-| [AWS provider for Terraform] (https://registry.terraform.io/providers/hashicorp/aws/latest)| 3.32 or later |
+| [AWS provider for Terraform](https://registry.terraform.io/providers/hashicorp/aws/latest)| 3.32 or later |
 
 ## Inputs
 
