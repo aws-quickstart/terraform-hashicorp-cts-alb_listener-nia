@@ -97,7 +97,7 @@ service {
 
 | Name | Version |
 |------|---------|
-| AWS Provider for Terraform | 3.32 or later |
+| AWS provider for Terraform | 3.32 or later |
 
 ## Inputs
 
