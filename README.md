@@ -18,11 +18,11 @@ The Consul-Terraform-Sync (CTS) module creates a listener rule and target group 
 
 ## Usage
 
-The module primarily uses Consul Terraform Sync user metadata
-to build listener rule conditions to the Consul ingress gateway
+The module primarily uses Consul-Terraform-Sync user metadata
+to build the listener rule conditions to the Consul ingress gateway
 target group.
 
-You can use this module in Consul Terraform Sync with a service
+You can use this module in Consul-Terraform-Sync with a service
 configuration for the Consul ingress gateway, any of its services
 for routing, and a task definition.
 
@@ -65,7 +65,7 @@ Exactly one of the following must be set per listener rule conditions:
 
 The services behind the ingress gateway should include 
 `cts_user_defined_meta`](https://www.consul.io/docs/nia/configuration#cts_user_defined_meta).
-The metadata fields use a map of strings. For example, in Consul Terraform Sync configuration,
+The metadata fields use a map of strings. For example, in Consul-Terraform-Sync configuration,
 you can set the conditions for `my-application` service.
 
 ```hcl
