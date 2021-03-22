@@ -98,7 +98,7 @@ service {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| listener\_arn | Listener ARN on Application Load Balancer for Consul ingress gateway listener rule. | `string` | n/a | yes |
+| listener\_arn | Listener ARN on Application Load Balancer for Consul ingress gateway listener rule. | `string` | — | yes |
 | listener\_rule\_priority | Priority of listener rule, between 1 and 50000. | `number` | `1` | no |
 | services | Consul services monitored by CTS. | <pre>map(<br>    object({<br>      id        = string<br>      name      = string<br>      kind      = string<br>      address   = string<br>      port      = number<br>      meta      = map(string)<br>      tags      = list(string)<br>      namespace = string<br>      status    = string<br><br>      node                  = string<br>      node_id               = string<br>      node_address          = string<br>      node_datacenter       = string<br>      node_tagged_addresses = map(string)<br>      node_meta             = map(string)<br><br>      cts_user_defined_meta = map(string)<br>    })<br>  )</pre> | n/a | yes |
 | target\_group\_health\_check | Health check attributes for target group. CTS sets port based on ingress gateway service metadata. For additional parameters, see [Resource: aws_lb_target_group](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lb_target_group#enabled). | <pre>object({<br>    enabled             = bool<br>    interval            = number<br>    path                = string<br>    timeout             = number<br>    healthy_threshold   = number<br>    unhealthy_threshold = number<br>    matcher             = string<br>  })</pre> | n/a | yes |
