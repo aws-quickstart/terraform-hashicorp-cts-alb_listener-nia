@@ -90,14 +90,14 @@ service {
 
 | Name | Version |
 |------|---------|
-| Terraform | >=0.14 |
-| AWS | >=3.32 |
+| Terraform | 0.14 or later |
+| AWS | 3.32 or later |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| AWS | >=3.32 |
+| AWS | 3.32 or later |
 
 ## Inputs
 
