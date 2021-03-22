@@ -1,6 +1,6 @@
 # terraform-consul_sync-aws-alb_listener_rule-nia
 
-The Consul Terraform Sync module creates a listener rule and target group for an AWS Application Load Balancer. When the rule condition is met, traffic is forwarded to a Consul ingress gateway.
+The Consul-Terraform-Sync (CTS) module creates a listener rule and target group for an AWS Application Load Balancer. When the rule condition is met, traffic is forwarded to a Consul ingress gateway.
 
 ## Authors
 
@@ -8,7 +8,7 @@ The Consul Terraform Sync module creates a listener rule and target group for an
 
 ## Prerequisites
 
-- [Consul Terraform Sync](https://learn.hashicorp.com/collections/consul/network-infrastructure-automation) v0.1.0-beta
+- [Consul-Terraform-Sync](https://learn.hashicorp.com/collections/consul/network-infrastructure-automation) v0.1.0-beta
 
 - [HashiCorp Consul](https://learn.hashicorp.com/consul) v1.9+
     - [Ingress gateway](https://www.consul.io/docs/connect/config-entries/ingress-gateway)
@@ -105,7 +105,7 @@ service {
 |------|-------------|------|---------|:--------:|
 | listener\_arn | Listener ARN on Application Load Balancer for Consul ingress gateway listener rule. | `string` | n/a | yes |
 | listener\_rule\_priority | Priority of listener rule, between 1 and 50000. | `number` | `1` | no |
-| services | Consul services monitored by Consul Terraform Sync. | <pre>map(<br>    object({<br>      id        = string<br>      name      = string<br>      kind      = string<br>      address   = string<br>      port      = number<br>      meta      = map(string)<br>      tags      = list(string)<br>      namespace = string<br>      status    = string<br><br>      node                  = string<br>      node_id               = string<br>      node_address          = string<br>      node_datacenter       = string<br>      node_tagged_addresses = map(string)<br>      node_meta             = map(string)<br><br>      cts_user_defined_meta = map(string)<br>    })<br>  )</pre> | n/a | yes |
+| services | Consul services monitored by CTS. | <pre>map(<br>    object({<br>      id        = string<br>      name      = string<br>      kind      = string<br>      address   = string<br>      port      = number<br>      meta      = map(string)<br>      tags      = list(string)<br>      namespace = string<br>      status    = string<br><br>      node                  = string<br>      node_id               = string<br>      node_address          = string<br>      node_datacenter       = string<br>      node_tagged_addresses = map(string)<br>      node_meta             = map(string)<br><br>      cts_user_defined_meta = map(string)<br>    })<br>  )</pre> | n/a | yes |
 | target\_group\_health\_check | Health check attributes for target group. CTS sets port based on ingress gateway service metadata. See https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lb_target_group#enabled for additional parmaeters. | <pre>object({<br>    enabled             = bool<br>    interval            = number<br>    path                = string<br>    timeout             = number<br>    healthy_threshold   = number<br>    unhealthy_threshold = number<br>    matcher             = string<br>  })</pre> | n/a | yes |
 | vpc\_id | VPC ID to attach a target group for Consul ingress gateway. | `string` | n/a | yes |
 
@@ -113,5 +113,5 @@ service {
 
 | Name | Description |
 |------|-------------|
-| consul\_ingress\_listener\_rule\_arn | Listener rule Amazon Resource Number (ARN) for Consul ingress gateway. |
+| consul\_ingress\_listener\_rule\_arn | Amazon Resource Number (ARN) of the listener rule for Consul ingress gateway. |
 | consul\_ingress\_target\_group\_arn | Target group ARN for Consul ingress gateway. |
