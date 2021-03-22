@@ -56,11 +56,11 @@ task {
 
 Exactly one of the following must be set per listener rule conditions:
 
-- Host Header
-- HTTP Request Method
-- HTTP Header
-- Path Pattern
-- Query String
+- Host header
+- HTTP request method
+- HTTP header
+- Path pattern
+- Query string
 - Source IP
 
 The services behind the ingress gateway should include 
