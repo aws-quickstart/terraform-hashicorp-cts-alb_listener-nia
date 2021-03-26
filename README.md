@@ -1,6 +1,6 @@
 # terraform-hashicorp-cts-alb_listener-nia
 
-The Consul-Terraform-Sync (CTS) module creates a listener rule and target group for an AWS Application Load Balancer. When the rule condition is met, traffic is forwarded to a Consul ingress gateway.
+The Consul-Terraform-Sync (CTS) module creates a listener rule and target group for an Application Load Balancer. When the rule condition is met, traffic is forwarded to a Consul ingress gateway.
 
 ## Authors
 
