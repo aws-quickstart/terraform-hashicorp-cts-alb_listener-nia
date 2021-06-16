@@ -48,7 +48,7 @@ task {
   description = "send traffic to ingress gateway for my-application"
   providers   = ["aws"]
   services    = ["my-application", "ingress-gateway"]
-  source      = "aws-quickstart/alb_listener_rule/aws"
+  source      = "aws-ia/alb_listener_rule/aws"
   version     = "0.1.0" # insert version
   variable_files = [] # define file with required variables
 }
